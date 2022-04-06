@@ -1,0 +1,39 @@
+.header {
+    grid-area: h;
+    background-color: #edeef0;
+}
+
+.loginBlock {
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.loginBlock button {
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    background-color: #4c5866;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #e7e8ec;
+    border: 0;
+    color: white;
+}
+
+.loginNavLink {
+    text-decoration: none;
+    color: white;
+}
+
+.userName {
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.loginLogout {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,85 @@
+.dialogsMainContainer {
+    display: flex;
+    background-color: #e8e9eb;
+    margin: 10px 15px;
+    border-radius: 7px;
+
+}
+
+.leftPanel {
+width: 300px;
+}
+
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 100%;
+    margin-top: 130px;
+}
+
+.rightPanel form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    /*margin: 5px 0;*/
+}
+
+.MessagesElements {
+    max-width: 680px;
+    padding: 5px 5px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: 68px;
+    margin-bottom: 10px;
+}
+
+.typeMessage {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 90px;
+    bottom: 5px;
+}
+
+.typeMessage button {
+    position: absolute;
+    display: block;
+    width: 100px;
+}
+
+.typeMessage textarea {
+    width: 900px;
+}
+
+.button button {
+    margin-left: 10px;
+    text-decoration: none;
+    background-color: white;
+    width: 2.3rem;
+    border-radius: 50%;
+    height: 2.3rem;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 9px;
+}
+
+.button button:hover {
+    background-color: #2a5885;
+    transition: .3s linear;
+}
+
+.button img {
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,54 @@
+.users {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.usersHeader {
+    border-radius: 4px;
+    box-shadow: 0 1px 0 5px #dce1e6, 0 0 0 5px #e7e8ec;
+
+    background-color: #4c5866;
+    display: flex;
+    margin: 20px 20px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    position: relative;
+}
+
+.userPhoto {
+    width: 150px;
+    height: 150px;
+}
+
+.button {
+    position: absolute;
+    align-content: center;
+    left: 165px;
+    top: 35px;
+}
+
+.name {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 12px;
+
+}
+
+.status {
+    color: white;
+    margin-left: 10px;
+    margin-top: 100px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.location {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    color: white;
+}

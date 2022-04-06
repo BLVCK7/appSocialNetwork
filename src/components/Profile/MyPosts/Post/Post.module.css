@@ -1,0 +1,38 @@
+.postMain {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.image img {
+  padding-left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.textPostOverall {
+  padding: 5px 10px;
+  line-height: 1.5;
+}
+
+.textSend {
+  font-size: 15px;
+  font-weight: 300;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.likes {
+  cursor: pointer;
+  text-align: center;
+  width: 50px;
+  background-color: #2a5885;
+  padding: 2px 10px;
+  border-radius: 4px;
+  color: #e7e8ec;
+}
+
