@@ -27,6 +27,7 @@ const ProfileInfo = (props) => {
     const onSubmit = (formData) => {
         props.saveProfile(formData)
         setEditMode(false)
+        console.log(formData)
     }
 
     return (
@@ -42,56 +43,53 @@ const ProfileInfo = (props) => {
                     { props.isOwner && <input type="file" onChange={onMainPhotoSelected} /> }
                 </div>
             </div>
-            { editMode
-                ? <ProfileDataForm initialValues={props.profile} onSubmit={onSubmit} profile={props.profile}/>
-                : <ProfileData profile={props.profile} isOwner={props.isOwner}/> }
-        </div>
-    )
-}
-
-const ProfileData = (props) => {
-    return (
-        <div className={s.describeBlock}>
-
-            <div className={s.topBlock}>
-                <h1>{props.profile.fullName}</h1>
-                {/*<div className={s.status}>*/}
-                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
-            </div>
-            <div className={s.middleBlock}>
-                <div className={s.leftDescribe}>
-                    <h3>Ищу работу:</h3>
-                    <h3>Место работы:</h3>
-                    <h3>О себе:</h3>
+            { !editMode &&
+            <div className={s.describeBlock}>
+                <div className={s.topBlock}>
+                    <h1>{props.profile.fullName}</h1>
+                    {/*<div className={s.status}>*/}
+                    <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
                 </div>
-                <div className={s.rightDescribe}>
-                    <span>{props.profile.lookingForAJob ? 'Да' : 'Нет'}</span>
-                    <span>{props.profile.lookingForAJobDescription}</span>
-                    <span>{props.profile.aboutMe}</span>
+                <div className={s.middleBlock}>
+                    <div className={s.leftDescribe}>
+                        <h3>Ищу работу:</h3>
+                        <h3>Место работы:</h3>
+                        <h3>О себе:</h3>
+                    </div>
+                    <div className={s.rightDescribe}>
+                        <span>{props.profile.lookingForAJob ? 'Да' : 'Нет'}</span>
+                        <span>{props.profile.lookingForAJobDescription}</span>
+                        <span>{props.profile.aboutMe}</span>
+                    </div>
                 </div>
-            </div>
-            <div className={s.bottomBlock}>
-                <div>
-                    <div className={s.counter}>1089</div>
-                    <div className={s.textActivities}>подписчиков</div>
-                </div>
-                <div>
-                    <div className={s.counter}>379</div>
-                    <div className={s.textActivities}>друзей</div>
-                </div>
-                <div>
-                    <div className={s.counter}>1051</div>
-                    <div className={s.textActivities}>фотография</div>
-                </div>
-                <div>
-                    <div className={s.counter}>258</div>
-                    <div className={s.textActivities}>отметок</div>
-                </div>
-                <div>
-                    <div className={s.counter}>568</div>
-                    <div className={s.textActivities}>видеозаписей</div>
+                <div className={s.bottomBlock}>
+                    <div>
+                        <div className={s.counter}>1089</div>
+                        <div className={s.textActivities}>подписчиков</div>
+                    </div>
+                    <div>
+                        <div className={s.counter}>379</div>
+                        <div className={s.textActivities}>друзей</div>
+                    </div>
+                    <div>
+                        <div className={s.counter}>1051</div>
+                        <div className={s.textActivities}>фотография</div>
+                    </div>
+                    <div>
+                        <div className={s.counter}>258</div>
+                        <div className={s.textActivities}>отметок</div>
+                    </div>
+                    <div>
+                        <div className={s.counter}>568</div>
+                        <div className={s.textActivities}>видеозаписей</div>
+                    </div>
                 </div>
             </div>
+            }
+            { editMode &&
+                <ProfileDataForm initialValues={props.profile} profile={props.profile} status={props.status}
+                                 updateStatus={props.updateStatus} onSubmit={onSubmit}/>
+            }
         </div>
     )
 }

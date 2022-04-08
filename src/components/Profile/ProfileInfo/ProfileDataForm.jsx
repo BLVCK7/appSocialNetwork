@@ -4,6 +4,7 @@ import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import {reduxForm} from "redux-form";
 import {createField, Input} from "../../common/FormsControls/FormsControls";
 
+
 const ProfileDataForm = (props) => {
     return <div className={s.describeBlock}>
             <form onSubmit={props.handleSubmit}>
@@ -15,15 +16,15 @@ const ProfileDataForm = (props) => {
             </div>
             <div className={s.middleBlock}>
                 <div className={s.leftDescribe}>
+                    <h3>Имя пользователя:</h3>
                     <h3>Ищу работу:</h3>
                     <h3>Место работы:</h3>
-                    <h3>Имя пользователя:</h3>
                     <h3>О себе:</h3>
                 </div>
                 <div className={s.rightDescribe}>
+                    {createField('Введите имя пользователя', 'fullName', [], Input)}
                     {createField('', 'lookingForAJob', [], Input, {type: 'checkbox'})}
                     {createField('Название компании', 'lookingForAJobDescription', [], Input)}
-                    {createField('Введите имя пользователя', 'fullName', [], Input)}
                     {createField('Расскажи о себе', 'aboutMe', [], Input)}
                 </div>
             </div>
